@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tabs</title>
+    <style>
+        body{
+            width: 100%;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            display: grid;
+            place-items: center;
+            background: black;
+        }
+        .container{
+            width: 500px;
+            height: 300px;
+            display: flex;
+            position: relative;
+        }
+        input{
+            display: none;
+        }
+        .tab-name{
+            color: white;
+            font-family: poppins;
+            height: 45px;
+            background: rgba(255, 255, 255, 0.25);
+            padding: 10px 30px;
+            box-sizing: border-box;
+            cursor: pointer;
+        }
+        input:checked + label .tab-name{
+            background: rgb(243, 240, 58);
+            color: black;
+            font-size: 18px;
+            font-weight: 800;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+        }
+        .tab-content{
+            position: absolute;
+            top: 50px;
+            left: 0;
+            background: white;
+            color: black;
+            font-family: poppins;
+            padding: 15px;
+            box-sizing: border-box;
+            border-radius: 5px;
+            opacity: 0;
+            z-index: 0;
+            transition: 0.5s;
+        }
+        input:checked + label .tab-content{
+            opacity: 1;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <input type="radio" name="option" id="1">
+    <label for="1">
+        <div class="tab-name">Home</div>
+        <div class="tab-content">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci dignissimos doloremque iste maxime repellat, tempora veritatis. Aliquam cupiditate dicta dolore doloremque dolorum earum eligendi eos est eum ipsum iste laboriosam modi nihil perspiciatis saepe sapiente suscipit, ullam. Alias amet blanditiis cum debitis dolor, dolore dolores ea earum, eius enim eos et eum excepturi facilis fugiat in iusto maiores modi molestiae natus nesciunt, non nulla obcaecati pariatur quibusdam rerum tempora veniam vero vitae voluptas! Ad culpa dolorum excepturi hic maiores maxime nesciunt nihil nisi non nostrum numquam, odit perspiciatis qui ratione rerum tenetur ut! Commodi, excepturi laboriosam modi nam sed temporibus.
+        </div>
+    </label>
+
+    <input type="radio" name="option" id="2">
+    <label for="2">
+        <div class="tab-name">Blog</div>
+        <div class="tab-content">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquam aliquid atque, blanditiis, dignissimos earum eligendi est exercitationem fugiat iste iusto nulla pariatur quae quis reprehenderit sequi tempore. Amet animi, cupiditate dignissimos dolor expedita, id illum mollitia nihil numquam obcaecati officiis possimus quaerat quam quibusdam quisquam saepe similique temporibus, ut.
+        </div>
+    </label>
+
+    <input type="radio" name="option" id="3">
+    <label for="3">
+        <div class="tab-name">Shop</div>
+        <div class="tab-content">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda beatae corporis deserunt, distinctio dolorum, eos inventore ipsam, iste iure magni provident quae quaerat suscipit voluptatum.
+        </div>
+    </label>
+
+    <input type="radio" name="option" id="4">
+    <label for="4">
+        <div class="tab-name">News</div>
+        <div class="tab-content">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto aspernatur autem cum illo quisquam rem voluptate. Adipisci aut consequuntur dicta dignissimos doloribus explicabo in iure iusto laboriosam, magnam, molestiae mollitia neque odio perspiciatis, quas repellendus sed vel voluptatem. Accusantium ad adipisci atque corporis cum delectus dolorem dolorum eius, esse est excepturi facere fugiat hic iure labore nisi non odio optio porro quam quas reprehenderit saepe sequi, similique unde ut velit voluptate. Aliquam blanditiis culpa debitis ducimus, esse est excepturi illum magnam magni maxime numquam, sapiente totam veniam? Animi assumenda at autem blanditiis distinctio dolorem earum eum eveniet hic itaque iusto, maiores maxime nesciunt pariatur quidem quo quos ratione ut velit veniam vero vitae voluptatum? Aut blanditiis deserunt dolor est exercitationem laborum nihil nisi sed vel?
+        </div>
+    </label>
+</div>
+</body>
+</html>

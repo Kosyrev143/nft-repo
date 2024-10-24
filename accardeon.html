@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accordion Example</title>
+    <style>
+        .accordion-header {
+            cursor: pointer;
+            padding: 1em;
+            background-color: #ccc;
+            margin: 1em 0;
+        }
+
+        .accordion-content {
+            display: none;
+            padding: 1em;
+            background-color: #eee;
+        }
+
+        .active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<div class="accordion-header" onclick="toggleAccordion(0)">Блок 1</div>
+<div class="accordion-content" id="accordion-0">Контент Блока 1</div>
+
+<div class="accordion-header" onclick="toggleAccordion(1)">Блок 2</div>
+<div class="accordion-content" id="accordion-1">Контент Блока 2</div>
+
+<div class="accordion-header" onclick="toggleAccordion(2)">Блок 3</div>
+<div class="accordion-content" id="accordion-2">Контент Блока 3</div>
+
+<div class="accordion-header" onclick="toggleAccordion(3)">Блок 4</div>
+<div class="accordion-content" id="accordion-3">Контент Блока 4</div>
+
+<script>
+    function toggleAccordion(index) {
+        const content = document.getElementById('accordion-' + index);
+        const isActive = content.classList.contains('active');
+        // Закрыть все открытые блоки
+        const allContents = document.querySelectorAll('.accordion-content');
+        allContents.forEach(c => c.classList.remove('active'));
+
+        // Открыть/закрыть выбранный блок
+        if (!isActive) {
+            content.classList.add('active');
+        }
+    }
+</script>
+</body>
+</html>

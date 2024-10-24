@@ -5,49 +5,208 @@
 body{
     min-height: 100vh;
     display: grid;
-    grid-template-columns: 300px 1fr;
+    grid-template-columns: 1fr;
     grid-template-rows: auto 1fr auto;
+    background-color: #171C20;
+    color: white;
     grid-template-areas:
     "header header"
-    "sidebar main"
-    "sidebar footer";
+    "main sidebar"
+    "footer sidebar";
 }
 header{
-    top: 0;
-    position: sticky;
     grid-area: header;
-    background-color: blue;
-    color: white;
-    padding: 1em;
+    padding: 3em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    height: 34px;
 }
 
+.nav-list{
+    display: flex;
+    flex-direction: row;
+    gap: 2em;
+    font-size: 16px;
+    list-style-type: none;
+}
+.nav-item a{
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+}
+.search-container{
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+}
+.search-wrapper {
+    position: relative;
+    width:114px;
+}
+
+.search-wrapper::before {
+    content: url('assets/header/search.svg');
+    position: absolute;
+    left: 17px;
+    top: 52%;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+#search-button {
+    width: 100%;
+    height: 42px;
+    background-color: #171C20;
+    border: 1px solid white;
+    color: white;
+    border-radius: 12px;
+    padding-left: 40px;
+    text-align: left;
+}
+
+#explore-button{
+    width: 114px;
+    height: 42px;
+    background-color: #901FA3;
+    border: none;
+    color: white;
+    border-radius: 12px;
+}
+#toggle-button{
+    display: none;
+    background-color: rgba(255, 255, 255, 0);
+    border: none
+}
+#toggle-sidebar{
+    display: none;
+    background-color: rgba(255, 255, 255, 0);
+    border: none
+}
 main{
     grid-area: main;
 }
+.start-container{
+    background-color: blueviolet;
+}
+.start-container .container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 3em 3em 5em 10em;
+}
+.top-seller-container{
+    background-color: linen;
+    color: black;
+}
+.top-seller-container .container{
+    display: flex;
+    flex-direction: column;
+    padding: 3em 3em 5em 10em;
+    gap: 70px
+}
+.head-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.day-select-container{
+    margin-right: 116px;
+}
+.live-auction-container{
+    background-color: aqua;
+    color: black;
+}
+.live-auction-container .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3em 3em 5em 10em;
+    gap: 70px
+}
+.hot-collection-container{
+    background-color: grey;
+    color: white;
+}
+.hot-collection-container .container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 3em 3em 5em 10em;
+    gap: 70px
+}
 aside{
-    height: calc(100vh - 50.9px);
-    top: 50.9px;
+    height: 88%;
+    top: 0;
+    right: 0;
     position: sticky;
     align-self: start;
     grid-area: sidebar;
-    background-color: grey;
+    background-color: #171C20;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    display: none;
+    padding: 3em;
+    font-size: 16px;
 }
+.sidebar-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 2em;
+}
+#toggle-sidebar-aside{
+    background-color: rgba(255, 255, 255, 0);
+    border: none
+}
+.nav-list-aside{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    align-items: flex-end;
+}
+.nav-item-aside{
+    list-style-type: none;
+}
+
+.nav-item-aside a{
+    text-decoration: none;
+    color: white;
+}
+
 footer{
     grid-area: footer;
     background-color: black;
     color: white;
     padding: 2em;
 }
+@media(max-width: 960px){
+    .nav-list{
+        gap: 1em;
+    }
+}
 @media(max-width: 800px){
-    body{
-        grid-template-columns: 1fr;
+    .nav-container{
+        display: none;
+    }
+    .search-container{
+        display: none;
+    }
+    #toggle-sidebar{
+        display: block;
     }
     aside{
         position: fixed;
         width: 300px;
-        display: none;
     }
     .show{
+        display: block;
+    }
+    #toggle-button{
         display: block;
     }
 }
