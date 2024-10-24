@@ -137,6 +137,44 @@ main{
     padding: 3em 3em 5em 10em;
     gap: 70px
 }
+.expire-artworks-container{
+    background-color: brown;
+    color: white;
+}
+.expire-artworks-container .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3em 3em 5em 10em;
+    gap: 70px
+}
+.hot-workss-container{
+    background-color: cadetblue;
+    color: black;
+}
+.hot-workss-container .container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3em 3em 5em 10em;
+}
+.wallet-grid-container{
+    margin-right: 116px;
+}
+.digital-creator-container{
+    background-color: chartreuse;
+    color: white;
+    margin: 3em 10em 5em 10em;
+
+}
+.digital-creator-container .container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2em 7em 1em 3em;
+}
 aside{
     height: 88%;
     top: 0;
@@ -183,6 +221,12 @@ footer{
     background-color: black;
     color: white;
     padding: 2em;
+}
+footer .container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 3em 8em 5em 8em;
 }
 @media(max-width: 960px){
     .nav-list{
