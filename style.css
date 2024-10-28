@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    border: 1px solid #171C20;
 }
 body{
     min-height: 100vh;
@@ -166,7 +167,6 @@ main{
     background-color: chartreuse;
     color: white;
     margin: 3em 10em 5em 10em;
-
 }
 .digital-creator-container .container{
     display: flex;
@@ -228,6 +228,71 @@ footer .container{
     justify-content: space-between;
     padding: 3em 8em 5em 8em;
 }
+.logo-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 20%;
+    gap: 20px;
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.5);
+}
+.logo-container .logo{
+    cursor: pointer;
+}
+.soc-net-container{
+    width: 50%;
+}
+.soc-net-list{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.soc-net-item{
+    list-style-type: none;
+    cursor: pointer;
+}
+.explore-container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.explore-container h2{
+    color: #A658B3;
+}
+.explore-list{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    list-style-type: none;
+    font-size: 20px;
+    color: white;
+}
+.explore-item a{
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+.explore-item a:hover{
+    color: #f8e940;
+}
+@media(max-width: 1080px){
+    .explore-container{
+        display: none;
+    }
+    .logo-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        gap: 20px;
+        font-size: 18px;
+        color: rgba(255, 255, 255, 0.5);
+    }
+}
 @media(max-width: 960px){
     .nav-list{
         gap: 1em;
@@ -252,5 +317,87 @@ footer .container{
     }
     #toggle-button{
         display: block;
+    }
+    .start-container .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding:3em;
+        align-items: center;
+    }
+    .top-seller-container .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding:3em;
+        gap: 70px
+    }
+    .head-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .day-select-container{
+        margin-right: 0;
+    }
+    .live-auction-container .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding:3em;
+        gap: 70px
+    }
+    .hot-collection-container .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding:3em;
+        gap: 70px
+    }
+    .expire-artworks-container .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 3em ;
+        gap: 70px
+    }
+    .hot-workss-container .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        padding: 3em ;
+        gap: 70px;
+    }
+    .wallet-grid-container{
+        margin-right: 0;
+    }
+    .compass-container{
+        display: none;
+    }
+    .digital-creator-container{
+        background-color: chartreuse;
+        margin: 3em;
+        color: white;
+    }
+    .digital-creator-container .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        padding: 2em 0;
+    }
+    .soc-net-item a img{
+        height: 10px;
+    }
+    footer{
+        padding: 3em;
+    }
+    footer .container{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0;
     }
 }
