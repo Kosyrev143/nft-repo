@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 body{
     min-height: 100vh;
@@ -24,6 +25,8 @@ header{
 }
 .logo{
     height: 34px;
+    cursor: pointer;
+
 }
 
 .nav-list{
@@ -36,6 +39,9 @@ header{
 .nav-item a{
     color: rgba(255, 255, 255, 0.6);
     text-decoration: none;
+}
+.nav-item a:hover{
+    color: #f8e940;
 }
 .search-container{
     display: flex;
@@ -75,6 +81,15 @@ header{
     color: white;
     border-radius: 12px;
 }
+#explore-button:hover{
+    width: 114px;
+    height: 42px;
+    background-color: #171C20;
+    border: 1px solid #901FA3;
+    color: white;
+    border-radius: 12px;
+    cursor: pointer;
+}
 #toggle-button{
     display: none;
     background-color: rgba(255, 255, 255, 0);
@@ -96,6 +111,96 @@ main{
     flex-direction: row;
     justify-content: space-between;
     padding: 3em 3em 5em 10em;
+}
+.discover-container{
+    display: flex;
+    flex-direction: column;
+    width:45%;
+    gap: 1em;
+}
+.discover-container h1{
+    font-size: 40px;
+    width: 80%;
+}
+.discover-container p{
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.5);
+}
+.explore-buttons{
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+}
+.purple-button{
+    padding: 1em 2em;
+    background-color: #901FA3;
+    border: none;
+    color: white;
+    border-radius: 12px;
+}
+.white-button{
+    padding: 1em 2em;
+    background-color: #171C20;
+    border: 1px solid white;
+    color: white;
+    border-radius: 12px;
+    text-align: center;
+}
+.current-bid-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.current-bid-image-container img{
+    height: 478px;
+}
+.current-bid-content-container{
+    width: 100%;
+}
+.grey-container-bid{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.bid-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.auction-ends-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.time-container{
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+}
+.time-list{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+.bid-buttons{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+.statistics-user-list{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+.statistics-user-item{
+    gap: 0.5em;
+    list-style-type: none;
+    display: flex;
+}
+.statistics-user-item::before{
+    content:url("assets/start-container/list-marker.svg");
+    margin-right: 0.5em;
 }
 .top-seller-container{
     background-color: linen;
