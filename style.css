@@ -528,6 +528,45 @@ footer .container{
         padding:3em;
         align-items: center;
     }
+    .discover-container{
+        width:100%;
+    }
+    .discover-container h1{
+        font-size: 30px;
+    }
+    .discover-container p{
+        font-size: 14px;
+    }
+    .purple-button{
+        font-size: 0.5rem;
+    }
+    .white-button{
+        font-size: 0.5rem;
+    }
+
+
+    .current-bid-image-container img {
+        height: 487px;
+    }
+    #current-bid-text{
+        font-size: 0.75rem;
+    }
+    #price{
+        font-size: 1.3rem;
+    }
+    .auction-ends-container p{
+        font-size: 0.75rem;
+    }
+    .bid-container{
+        font-size: 0.55rem;
+    }
+    .time-item span{
+        font-size: 1.3rem;
+    }
+    .time-item{
+        font-size: 0.7rem;
+    }
+
     .current-bid-image-container  {
         display: none;
     }
