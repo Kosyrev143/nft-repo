@@ -151,7 +151,7 @@ main{
     text-align: center;
     font-size: 1rem;
 }
-.current-bid-container{
+.current-bid-container {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -159,11 +159,24 @@ main{
     justify-content: space-between;
     position: relative;
 }
-.current-bid-image-container img{
+
+.current-bid-image-container {
+    position: relative;
+    width: 100%; /* Если нужно, чтобы изображение занимало весь контейнер */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.current-bid-image-container img {
     position: absolute;
+    top: -5%;
+    left: 50%;
+    transform: translate(-50%, 5%);
     z-index: 1;
     height: 687px;
 }
+
 .current-bid-content-container{
     width: 100%;
 }
@@ -441,6 +454,47 @@ footer .container{
         font-size: 18px;
         color: rgba(255, 255, 255, 0.5);
     }
+    .discover-container h1{
+        font-size: 40px;
+    }
+    .discover-container p{
+        font-size: 17px;
+    }
+    .purple-button{
+        font-size: 0.6rem;
+    }
+    .white-button{
+        font-size: 0.6rem;
+    }
+
+    .statistics-user-container span{
+        font-size: 1rem;
+    }
+    .statistics-user-container p{
+        font-size: 0.8rem;
+    }
+    .current-bid-image-container img {
+        height: 487px;
+    }
+    #current-bid-text{
+        font-size: 1rem;
+    }
+    #price{
+        font-size: 1.9rem;
+    }
+    .auction-ends-container p{
+        font-size: 1rem;
+    }
+    .time-item span{
+        font-size: 1.9rem;
+    }
+    .time-item{
+        font-size: 0.7rem;
+    }
+    .bid-container{
+        font-size: 0.7rem;
+    }
+
 }
 @media(max-width: 960px){
     .nav-list{
@@ -473,6 +527,9 @@ footer .container{
         justify-content: space-between;
         padding:3em;
         align-items: center;
+    }
+    .current-bid-image-container  {
+        display: none;
     }
     .top-seller-container .container{
         display: flex;
