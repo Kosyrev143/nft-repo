@@ -261,8 +261,8 @@ main{
     font-size: 2rem;
 }
 .top-seller-container{
-    background-color: linen;
-    color: black;
+    background-color: #1F1721;
+    color: white;
 }
 .top-seller-container .container{
     display: flex;
@@ -270,6 +270,41 @@ main{
     padding: 3em 3em 5em 10em;
     gap: 70px
 }
+.top-seller-header-container h1{
+    font-size: 5rem;
+    color: white;
+}
+.select-box-wrapper {
+    position: relative;
+    width: 400px; /* Укажите ширину по вашему дизайну */
+}
+
+/* Скрытие стандартной стрелки */
+.select-box {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: #1F1721;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 2rem;
+    padding: 1em;
+    width: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 15px;
+    outline: none;
+}
+
+/* Добавление своей стрелки */
+.select-box-wrapper::after {
+    content: url('assets/top-seller-container/select-icon.svg'); /* Замените путь на ваш */
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    pointer-events: none; /* чтобы клики проходили через иконку */
+    margin-right: 1em;
+}
+
 .head-container{
     display: flex;
     flex-direction: row;
@@ -277,6 +312,39 @@ main{
 }
 .day-select-container{
     margin-right: 116px;
+}
+.slider-top-seller-container {
+    position: relative;
+    width: 100%; /* Задайте ширину контейнера */
+    max-width: 295px; /* Максимальная ширина для контейнера */
+    margin: auto; /* Центрирование контейнера */
+}
+
+.slide {
+    display: none; /* Скрываем все слайды по умолчанию */
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Используйте 1fr для адаптивных колонок */
+    grid-template-rows: repeat(2, auto); /* Высота строк будет автоматически подстраиваться под содержимое */
+    gap: 10px; /* Пространство между элементами */
+}
+
+.grid-item {
+    position: relative;
+    overflow: hidden;
+    width: 100%; /* Убедитесь, что каждый элемент занимает всю ширину */
+}
+
+.grid-item img {
+    width: 100%; /* Изображения занимают всю ширину родительского элемента */
+    height: auto; /* Высота изображений будет пропорциональной */
+}
+
+/* Показываем первый слайд по умолчанию */
+.slide:first-child {
+    display: block;
 }
 .live-auction-container{
     background-color: aqua;
@@ -338,7 +406,8 @@ main{
     padding: 2em 7em 1em 3em;
 }
 aside{
-    height: 88%;
+    height: 100vh;
+
     top: 0;
     right: 0;
     position: sticky;
@@ -351,6 +420,7 @@ aside{
     display: none;
     padding: 3em;
     font-size: 16px;
+    z-index: 999;
 }
 .sidebar-container{
     width: 100%;
@@ -440,6 +510,16 @@ footer .container{
 .explore-item a:hover{
     color: #f8e940;
 }
+@media(max-width: 1650px){
+    .current-bid-image-container img {
+        height: 880px;
+    }
+}
+@media(max-width: 1200px){
+    .current-bid-image-container img {
+        height: 890px;
+    }
+}
 @media(max-width: 1080px){
     .explore-container{
         display: none;
@@ -466,15 +546,14 @@ footer .container{
     .white-button{
         font-size: 0.6rem;
     }
-
     .statistics-user-container span{
-        font-size: 1rem;
+        font-size: 1.3rem;
     }
     .statistics-user-container p{
         font-size: 0.8rem;
     }
     .current-bid-image-container img {
-        height: 487px;
+        height: 437px;
     }
     #current-bid-text{
         font-size: 1rem;
@@ -494,6 +573,35 @@ footer .container{
     .bid-container{
         font-size: 0.7rem;
     }
+    .top-seller-header-container h1{
+        font-size: 40px;
+    }
+    .select-box-wrapper {
+        position: relative;
+        width: 200px; /* Укажите ширину по вашему дизайну */
+    }
+    .select-box {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        background-color: #1F1721;
+        color: rgba(255, 255, 255, 0.5);
+        font-size: 1rem;
+        padding: 1em;
+        width: 100%;
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        border-radius: 15px;
+        outline: none;
+    }
+    .select-box-wrapper::after {
+        content: url('assets/top-seller-container/select-icon.svg'); /* Замените путь на ваш */
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        pointer-events: none; /* чтобы клики проходили через иконку */
+        margin-right: 1em;
+    }
+
 
 }
 @media(max-width: 960px){
@@ -528,20 +636,39 @@ footer .container{
         padding:3em;
         align-items: center;
     }
+    .grey-container-bid{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2em;
+        background-color: #3B3943;
+        border-radius: 15px;
+        padding: 1em 3em;
+        margin: 1em 0;
+        height: 100%;
+        z-index: 2;
+    }
+    #bid-button{
+        width: 80px;
+    }
+    #see-button{
+        width: 80px;
+    }
     .discover-container{
         width:100%;
     }
     .discover-container h1{
-        font-size: 30px;
+        font-size: 40px;
     }
     .discover-container p{
-        font-size: 14px;
+        font-size: 16px;
     }
     .purple-button{
-        font-size: 0.5rem;
+        font-size: 0.6rem;
     }
     .white-button{
-        font-size: 0.5rem;
+        font-size: 0.6rem;
     }
 
 
@@ -582,10 +709,12 @@ footer .container{
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
+        gap: 2em;
     }
     .day-select-container{
         margin-right: 0;
     }
+
     .live-auction-container .container{
         display: flex;
         flex-direction: column;
